@@ -1,5 +1,6 @@
 //todo define types for these
 export interface IConfig {
+  extendedStash?: boolean;
 }
 
 export interface IConstantData {
@@ -20,15 +21,15 @@ export interface IConstantData {
 }
 
 export interface ID2S {
-  header:       IHeader;
-  attributes:      IAttributes;
+  header: IHeader;
+  attributes: IAttributes;
   item_bonuses: IMagicProperty[];
-  skills:       ISkill[]; //Skill
-  items:        IItem[]; //Item
+  skills: ISkill[]; //Skill
+  items: IItem[]; //Item
   corpse_items: IItem[];
-  merc_items:   IItem[];
-  golem_item:   IItem;
-  is_dead:      number;
+  merc_items: IItem[];
+  golem_item: IItem;
+  is_dead: number;
 }
 
 export interface IAttributes {
@@ -39,7 +40,8 @@ export interface IMenuAppearance {
   graphic: number;
   tint: number;
 }
-export interface ICharMenuAppearance { //composite.txt
+export interface ICharMenuAppearance {
+  //composite.txt
   head: IMenuAppearance;
   torso: IMenuAppearance;
   legs: IMenuAppearance;
@@ -95,7 +97,7 @@ export interface INPCS {
   ormus: INPC;
   cain_act_v: INPC;
   qualkehk: INPC;
-  nihlathak: INPC; 
+  nihlathak: INPC;
 }
 
 export interface IQuest {
@@ -259,7 +261,7 @@ export interface IHeader {
   class: string;
   created: number;
   last_played: number;
-  menu_appearance: ICharMenuAppearance
+  menu_appearance: ICharMenuAppearance;
   left_skill: string;
   right_skill: string;
   left_swap_skill: string;
@@ -284,7 +286,7 @@ export interface IHeader {
   merc_experience: number;
 }
 
-export interface IStatus  {
+export interface IStatus {
   expansion: boolean;
   died: boolean;
   hardcore: boolean;
@@ -366,26 +368,26 @@ export interface IItem {
 }
 
 export interface IWeaponDamage {
-  mindam: number,
-  maxdam: number,
-  twohandmindam: number,
-  twohandmaxdam: number
+  mindam: number;
+  maxdam: number;
+  twohandmindam: number;
+  twohandmaxdam: number;
 }
 
 export interface IEarAttributes {
-  class: number,
-  level: number,
-  name: string
+  class: number;
+  level: number;
+  name: string;
 }
 
 export interface IMagicProperty {
-  id: number,
-  name: string,
-  values: number[],
-  description: string,
-  visible: boolean,
-  op_value: number,
-  op_stats: string[]
+  id: number;
+  name: string;
+  values: number[];
+  description: string;
+  visible: boolean;
+  op_value: number;
+  op_stats: string[];
 }
 
 export enum EItemQuality {
